@@ -64,6 +64,63 @@
 
             #endregion
 
+            //------------------------------ Vedio 02 --------------------------------
+            #region Array of Reference Type
+
+            #region Array of Reference Type ImMutable [String]
+            string[] Names01 = { "Mohamed" , "Ahmed" };
+            string[] Names02 = new String[2];
+            Console.WriteLine($"Hash Code of Name01 => {Names01.GetHashCode()}"); //54267293
+            Console.WriteLine($"Hash Code of Name02 => {Names02.GetHashCode()}"); //18643596
+
+            #region Shallow Copy
+            //Names02 = Names01; // Shallow Copy
+            //                   // Copy Value names01 => names02
+            //                   // [names01 - names02] => Have Same Value
+            //                   // [names01 - names02] => Refer to same obj
+
+            //Console.WriteLine("After Shallow Copy");
+            //Console.WriteLine($"HashCode Of names01 = {Names01.GetHashCode()}"); //54267293
+            //Console.WriteLine($"HashCode Of names02 = {Names02.GetHashCode()}"); //54267293
+
+            //Console.WriteLine($"names01[0] = {Names01[0]}"); //Mohamed
+            //Console.WriteLine($"names02[0] = {Names02[0]}"); //Mohamed
+
+            //Names01[0] = "Tarek";
+
+            //Console.WriteLine("After Changing");
+
+            //Console.WriteLine($"names01[0] = {Names01[0]}"); //Tarek
+            //Console.WriteLine($"names02[0] = {Names02[0]}"); //Tarek
+
+            #endregion
+
+            #region Deep Copy
+            //Names02 = (string[])Names01.Clone(); // Deep Copy
+            //                   // Happened in Heep
+            //                   // Create New object with Different and new identity then return it
+            //                   // the New Object will have the same object state [Data] of Caller
+
+            //Console.WriteLine("After Shallow Copy");
+            //Console.WriteLine($"HashCode Of names01 = {Names01.GetHashCode()}"); //54267293
+            //Console.WriteLine($"HashCode Of names02 = {Names02.GetHashCode()}"); //33574638
+
+            //Console.WriteLine($"names01[0] = {Names01[0]}"); //Mohamed
+            //Console.WriteLine($"names02[0] = {Names02[0]}"); //Mohamed
+
+            //Names01[0] = "Tarek";
+
+            //Console.WriteLine("After Changing");
+
+            //Console.WriteLine($"names01[0] = {Names01[0]}"); //Tarek
+            //Console.WriteLine($"names02[0] = {Names02[0]}"); //Mohamed
+
+            #endregion
+
+            #endregion
+
+            #endregion
+
 
             #endregion
         }
