@@ -197,6 +197,8 @@ namespace Session_06
 
             //------------------------------ Vedio 05 --------------------------------
             #region Build-In Interfaces
+
+            #region IClonable
             //Employee employee01 = new Employee() { Id = 10, Name = "Omar", Salary = 5000 };
             //Employee employee02 = new Employee() { Id = 20, Name = "Mona", Salary = 8000 };
 
@@ -219,9 +221,44 @@ namespace Session_06
             //Console.WriteLine(employee01);
             //Console.WriteLine($"employee01 => {employee01.GetHashCode()}");
             //Console.WriteLine(employee02);
-            //Console.WriteLine($"employee02 => {employee02.GetHashCode()}");
+            //Console.WriteLine($"employee02 => {employee02.GetHashCode()}"); 
 
             #endregion
+
+            //------------------------------Vedio 06--------------------------------
+            #region IComparable
+            //int[] numbers = { 4, 5, 6, 9, 1, 2, 7, 5 };
+            //Array.Sort(numbers);
+            ////int => Built in Struct implement interface [IComparable] => CompareTo
+            //foreach (int number in numbers)
+            //{
+            //    Console.WriteLine(number);
+            //}
+
+            //Employee[] employees =
+            //{
+            //    new Employee() { Id = 10, Name = "Mohamed", Salary = 6000 },
+            //    new Employee() { Id = 20, Name = "Ahmed", Salary = 10000 },
+            //    new Employee() { Id = 30, Name = "Sama", Salary = 4000 },
+            //    new Employee() { Id = 40, Name = "May", Salary = 5000 },
+            //};
+
+            //Array.Sort(employees);
+            //Array.Reverse(employees);
+
+            //foreach (Employee employee in employees)
+            //{
+            //    Console.WriteLine(employee);
+            //}
+            ////InvalidOperationException
+
+
+
+            #endregion
+
+            #endregion
+
+
 
             #endregion
         }
