@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using Session_06.Build_In_Interfaces;
+using System.Globalization;
+using System.Text;
 
 namespace Session_06
 {
@@ -6,6 +8,11 @@ namespace Session_06
     {
         static void Main(string[] args)
         {
+            #region Culture
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+            #endregion
+
             #region Shallow Copy and Deep Copy
 
             //------------------------------ Vedio 01 --------------------------------
@@ -188,6 +195,33 @@ namespace Session_06
 
             #endregion
 
+            //------------------------------ Vedio 05 --------------------------------
+            #region Build-In Interfaces
+            //Employee employee01 = new Employee() { Id = 10, Name = "Omar", Salary = 5000 };
+            //Employee employee02 = new Employee() { Id = 20, Name = "Mona", Salary = 8000 };
+
+            //Console.WriteLine(employee01);
+            //Console.WriteLine($"employee01 => {employee01.GetHashCode()}");
+            //Console.WriteLine(employee02);
+            //Console.WriteLine($"employee02 => {employee02.GetHashCode()}");
+            //// Array => Built in Class implement interface [ICloneable] => Clone    
+
+            //employee02 = (Employee)employee01.Clone();
+
+            ////employee02 = new Employee()
+            ////{
+            ////    Id = employee01.Id,
+            ////    Name = employee01.Name,
+            ////    Salary = employee01.Salary,
+            ////};
+            ////employee02 = new Employee(employee01);
+            //Console.WriteLine("After Deep Copy");
+            //Console.WriteLine(employee01);
+            //Console.WriteLine($"employee01 => {employee01.GetHashCode()}");
+            //Console.WriteLine(employee02);
+            //Console.WriteLine($"employee02 => {employee02.GetHashCode()}");
+
+            #endregion
 
             #endregion
         }
