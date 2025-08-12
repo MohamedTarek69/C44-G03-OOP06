@@ -1,4 +1,5 @@
-﻿using Session_06.Build_In_Interfaces;
+﻿using Session_06.Abstraction;
+using Session_06.Build_In_Interfaces;
 using System.Globalization;
 using System.Text;
 
@@ -6,6 +7,14 @@ namespace Session_06
 {
     internal class Program
     {
+        static void ProcessShape(Shape shape)
+        {
+            if (shape is not null)
+            {
+                Console.WriteLine(shape.CalcArea());
+                Console.WriteLine(shape.Perimter);
+            }
+        }
         static void Main(string[] args)
         {
             #region Culture
@@ -275,6 +284,18 @@ namespace Session_06
 
 
             #endregion
+
+            #endregion
+
+            //------------------------------ Vedio 08 --------------------------------
+            #region Abstraction
+            //Shape shape = new Shape(); // invalid
+            //Rectangle rectangle = new Rectangle(10,20);
+            ////Console.WriteLine(rectangle.CalcArea());
+            ////Console.WriteLine(rectangle.Perimter);
+            ////Shape shape;
+
+            //ProcessShape(rectangle);
 
             #endregion
 
