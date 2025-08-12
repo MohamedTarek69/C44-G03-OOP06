@@ -256,6 +256,26 @@ namespace Session_06
 
             #endregion
 
+            //------------------------------Vedio 07--------------------------------
+            #region IComparer
+            //Employee[] employees =
+            //{
+            //    new Employee() { Id = 10, Name = "Mohamed", Salary = 6000 },
+            //    new Employee() { Id = 20, Name = "Ahmed", Salary = 10000 },
+            //    new Employee() { Id = 30, Name = "Sama", Salary = 4000 },
+            //    new Employee() { Id = 40, Name = "May", Salary = 5000 },
+            //};
+
+            //Array.Sort(employees, new EmployeeNameComparer());
+
+            //foreach (Employee employee in employees)
+            //{
+            //    Console.WriteLine(employee);
+            //}
+
+
+            #endregion
+
             #endregion
 
 
