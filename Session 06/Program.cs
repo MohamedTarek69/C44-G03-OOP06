@@ -1,4 +1,6 @@
-﻿namespace Session_06
+﻿using System.Text;
+
+namespace Session_06
 {
     internal class Program
     {
@@ -68,10 +70,10 @@
             #region Array of Reference Type
 
             #region Array of Reference Type ImMutable [String]
-            string[] Names01 = { "Mohamed" , "Ahmed" };
-            string[] Names02 = new String[2];
-            Console.WriteLine($"Hash Code of Name01 => {Names01.GetHashCode()}"); //54267293
-            Console.WriteLine($"Hash Code of Name02 => {Names02.GetHashCode()}"); //18643596
+            //string[] Names01 = { "Mohamed" , "Ahmed" };
+            //string[] Names02 = new String[2];
+            //Console.WriteLine($"Hash Code of Name01 => {Names01.GetHashCode()}"); //54267293
+            //Console.WriteLine($"Hash Code of Name02 => {Names02.GetHashCode()}"); //18643596
 
             #region Shallow Copy
             //Names02 = Names01; // Shallow Copy
@@ -114,6 +116,71 @@
 
             //Console.WriteLine($"names01[0] = {Names01[0]}"); //Tarek
             //Console.WriteLine($"names02[0] = {Names02[0]}"); //Mohamed
+
+            #endregion
+
+            #endregion
+
+            //------------------------------ Vedio 03 --------------------------------
+            #region Array of Reference Type Mutable [StringBuilder]
+            //StringBuilder[] names01 = new StringBuilder[1];
+            //names01[0] = new StringBuilder();
+
+            //// null => Omar
+            ////StringBuilder stringBuilder = new StringBuilder();
+            ////stringBuilder.Append("Omar");
+
+            ////names01[0] = "Omar";
+
+            //names01[0].Append("omar"); // NullReferenceException
+
+            //string[] names02 = new string[1];
+
+            //names02[0] = "Omar"; // Syntax Suger
+
+            //string[] names03 = new string[1];
+            //names03[0] = new string("omar");
+
+            //StringBuilder[] Names01 = { new StringBuilder("Mohamed") };
+            //StringBuilder[] Names02 = new StringBuilder[1];
+            //Console.WriteLine($"Hash Code of Name01 => {Names01.GetHashCode()}"); //54267293
+            //Console.WriteLine($"Hash Code of Name02 => {Names02.GetHashCode()}"); //18643596
+
+            #region Shallow Copy
+            //Names02 = Names01;
+
+            //Console.WriteLine("After Shallow Copy");
+            //Console.WriteLine($"HashCode Of names01 = {Names01.GetHashCode()}"); //54267293
+            //Console.WriteLine($"HashCode Of names02 = {Names02.GetHashCode()}"); //54267293
+
+            //Console.WriteLine($"names01[0] = {Names01[0]}"); //Mohamed
+            //Console.WriteLine($"names02[0] = {Names02[0]}"); //Mohamed
+
+            //Names01[0].Append(" Tarek");
+
+            //Console.WriteLine("After Changing");
+
+            //Console.WriteLine($"names01[0] = {Names01[0]}"); //Mohamed Tarek
+            //Console.WriteLine($"names02[0] = {Names02[0]}"); //Mohamed Tarek
+
+            #endregion
+
+            #region Deep Copy
+            //Names02 = (StringBuilder[])Names01.Clone();
+
+            //Console.WriteLine("After Shallow Copy");
+            //Console.WriteLine($"HashCode Of names01 = {Names01.GetHashCode()}"); //54267293
+            //Console.WriteLine($"HashCode Of names02 = {Names02.GetHashCode()}"); //33574638
+
+            //Console.WriteLine($"names01[0] = {Names01[0]}"); //Mohamed
+            //Console.WriteLine($"names02[0] = {Names02[0]}"); //Mohamed
+
+            //Names01[0].Append(" Tarek");
+
+            //Console.WriteLine("After Changing");
+
+            //Console.WriteLine($"names01[0] = {Names01[0]}"); //Mohamed Tarek
+            //Console.WriteLine($"names02[0] = {Names02[0]}"); //Mohamed Tarek
 
             #endregion
 
