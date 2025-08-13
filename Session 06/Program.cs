@@ -1,4 +1,6 @@
 ﻿using Session_06.Project_01;
+using Session_06.Project_03;
+using System.Globalization;
 
 namespace Session_06
 {
@@ -59,6 +61,11 @@ namespace Session_06
         }
         static void Main(string[] args)
         {
+            #region Culture
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+            #endregion
+
             #region Project 01
             //Point3D P = new Point3D(10, 10, 10);
             //Console.WriteLine(P.ToString()); //Point Coordinates: (10, 10, 10)
@@ -134,6 +141,88 @@ namespace Session_06
             //Console.WriteLine($"Subtract: {Maths.Subtract(10, 5)}");
             //Console.WriteLine($"Multiply: {Maths.Multiply(10, 5)}");
             //Console.WriteLine($"Divide: {Maths.Divide(10, 5)}");
+
+            #endregion
+
+            #region Project 03
+            //Console.WriteLine("Please choose your type: \n1. Regular\n2. Premium\n3. Guest");
+            //int choice = 0;
+            //do
+            //{
+            //    Console.Write("Your Option: ");
+            //    bool IsValidChoice = int.TryParse(Console.ReadLine(), out choice);
+            //    if (IsValidChoice && choice >= 1 && choice <= 3)
+            //    {
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Invalid choice. Please enter a number between 1 and 3.");
+            //    }
+            //} while (true);
+
+            //decimal Price = 0;
+            //do
+            //{
+            //    Console.Write("Please Enter Product Price:");   
+            //    bool IsValidChoice = decimal.TryParse(Console.ReadLine(), out Price);
+            //    if (IsValidChoice)
+            //    {
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Invalid choice. Please enter a number between 1 and 3.");
+            //    }
+            //} while (true);
+
+            //int Quantity = 0;
+            //do
+            //{
+            //    Console.Write("Please Enter Product Quantity:");
+            //    bool IsValidChoice = int.TryParse(Console.ReadLine(), out Quantity);
+            //    if (IsValidChoice && Quantity > 0)
+            //    {
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Invalid choice. Please enter a positive integer.");
+            //    }
+            //} while (true);
+
+            //User user;
+            //switch (choice)
+            //{
+            //    case 1:
+            //        user = new RegularUser();
+            //        Console.WriteLine("User Type => RegularUser");
+            //        break;
+            //    case 2:
+            //        user = new PremiumUser();
+            //        Console.WriteLine("User Type => PremiumUser");
+            //        break;
+            //    case 3:
+            //        user = new GuestUser();
+            //        Console.WriteLine("User Type => GuestUser");
+            //        break;
+            //    default:
+            //        user = new GuestUser();
+            //        Console.WriteLine("Invalid choice Defaulting to Guest User.");
+            //        break;
+            //}
+
+            //Discount discount = user.GetDiscount();
+            //decimal zerodiscount = 0;
+            //if (choice == 3)
+            //{
+            //    discount.Name = $"No Discount Available => {zerodiscount:C}";
+            //}
+            //decimal discountAmount = discount.CalculateDiscount(Price, Quantity);
+            //decimal finalPrice = Price * Quantity - discountAmount;
+            //Console.WriteLine($"Discount Type: {discount.Name}");
+            //Console.WriteLine($"Discount Amount: {discountAmount:C}");
+            //Console.WriteLine($"Final Price: {finalPrice:C}");
 
             #endregion
 
