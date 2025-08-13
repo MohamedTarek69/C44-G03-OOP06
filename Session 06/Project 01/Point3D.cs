@@ -25,10 +25,10 @@ namespace Session_06.Project_01
         public Point3D() : this(0, 0, 0)
         {   
         }
-        public Point3D(int x, int y) : this(x, y, 0)
+        public Point3D(int x, int y) : this()
         {
         }
-        public Point3D(int x) : this(x, 0, 0)
+        public Point3D(int x) : this(x, 0)
         {
         }
 
